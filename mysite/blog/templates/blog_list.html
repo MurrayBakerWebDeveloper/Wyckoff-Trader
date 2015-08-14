@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            background-color: lightcyan;
+        }
+        .outer {
+            border: 2px black solid;
+            padding: 10px;
+            margin: 10%;
+            margin-top: 2%;
+        }
+        .inner {
+            background-color: tomato;
+            border: 1px blueviolet solid;
+            padding: 15px;
+            margin: 3%;
+            box-shadow: 3px 3px lightgray;
+        }
+        .title {
+            font-size: 30px;
+            font-style: oblique;
+        }
+        .content {
+            font-size: 15px;
+            color: darkcyan;
+        }
+        .author {
+            font-size: 12px;
+        }
+        .page-title {
+            font-size: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Welcome to my blog!</h1>
+</div>
+
+<div class="outer">
+
+    {% for blog in blogs %}
+        <div class="inner">
+            <p class="title">
+                {{ blog.title }} <span class="author">by {{ blog.author }}</span>
+            </p>
+            <hr>
+
+            <p class="content"><pre class="content">{{ blog.content }}</pre></p>
+
+        </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
