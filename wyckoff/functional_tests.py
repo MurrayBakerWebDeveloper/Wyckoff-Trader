@@ -14,7 +14,7 @@ class NewVisitorTest(unittest.TestCase):
     def test_can_enter_pair_and_retrieve_ohlc(self):
         # Otis is interested in the Wyckoff trading method and found
         # an online app to help evaluate forex using Wykoffian principles
-        browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000')
 
         # He notices Wyckoff in the title and header of the page
         self.assertIn('Wyckoff', self.browser.title)
