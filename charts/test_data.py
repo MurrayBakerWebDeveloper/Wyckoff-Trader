@@ -6,3 +6,5 @@ oanda = oandapy.API(environment="practice", access_token='d6cd7f45a3a9f38c177fbc
 response = oanda.get_history(instrument="EUR_USD", start='2005-01-01T00', granularity='M1')
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(response)`
+
+
